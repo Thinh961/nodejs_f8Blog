@@ -11,6 +11,7 @@ class SiteController {
             }
         });
         // res.render('home');
+        // thinh
     }
 
     // [GET] /search
