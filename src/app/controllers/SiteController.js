@@ -1,10 +1,15 @@
 const Course = require('../models/CourseModel')
+const { multiDataToObject } = require('../../util/mongoose')
 class SiteController {
 
     // [GET] /
     index(req, res, next) {
         Course.find({})
-            .then(courses => res.render('home', { courses }))
+            .then(courses => {
+                res.render('home', { 
+                    courses: multiDataToObject(courses)
+                });
+            })
             .catch(next);
     }
 
