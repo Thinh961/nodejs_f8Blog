@@ -1,9 +1,15 @@
 const Course = require('../models/CourseModel')
-const { oneItemToObject } = require('../../util/mongoose')
+const { multiDataToObject } = require('../../util/mongoose')
 class MeController {
     // [GET] /me/stored/courses
     storedCourses(req, res, next) {
-        res.render('search')
+        Course.find({ deletedAt: null })
+        .then((courses) => 
+        res.render('me/stored-courses', {
+            courses: multiDataToObject(courses)
+        }))
+        .catch(next);
+        
     }
 
 }
