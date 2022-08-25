@@ -10,7 +10,7 @@
                 <th scope="col" class="text-center">STT</th>
                 <th scope="col" class="text-center">Tên khóa học</th>
                 <th scope="col" class="text-center">Trình độ</th>
-                <th scope="col" class="text-center">Thời gian tạo</th>
+                <th scope="col" class="text-center">Thời gian xóa</th>
                 <th scope="col" class="text-center">Thao tác</th>
             </tr>
         </thead>
@@ -20,7 +20,7 @@
                 <th class="text-center" scope="row">{{sum @index 1}}</th>
                 <td class="text-center">{{this.name}}</td>
                 <td class="text-center">{{this.level}}</td>
-                <td class="text-center">{{this.createdAt}}</td>
+                <td class="text-center">{{this.deletedAt}}</td>
                 <td class="text-center">
                     <a href="" class="btn btn-primary btn-restore" data-id="{{this._id}}">Khôi phục</a>
                     <a href="javascript:void(0)" class="btn btn-danger" data-toggle="modal"
