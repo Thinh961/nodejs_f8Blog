@@ -88,10 +88,11 @@
     document.addEventListener('DOMContentLoaded', function () {
         var courseId;
         var deleteForm = document.forms['delete-course-form'];
+        var deleteAllForm = document.forms['form-delete-all'];
         var restoreForm = document.forms['restore-course-form'];
         var containerForm = $('form[name="container-form"]');
-        var btnDeleteCoure = document.getElementById('btnDelete')
-        var btnRestore = $('.btn-restore')
+        var btnDeleteCourse = document.getElementById('btnDelete');
+        var btnRestore = $('.btn-restore');
 
         var checkAll = $('#checkboxAll');
         var checkItem = $('input[name="courseIds[]"]');
@@ -102,7 +103,7 @@
             courseId = button.data('id');
         });
 
-        btnDeleteCoure.onclick = function() {
+        btnDeleteCourse.onclick = function() {
             deleteForm.action = '/courses/' + courseId + '/force?_method=DELETE';
             deleteForm.submit();
         }
