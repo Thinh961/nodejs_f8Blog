@@ -17,7 +17,7 @@
             </div>
             <select class="form-control form-control-sm ml-2 check-all" name="action" required="true">
                 <option value="">-- Hành động --</option>
-                <option value="delete" >Xóa</option>
+                <option value="delete">Xóa</option>
             </select>
             <button class="btn btn-primary btn-sm ml-2 checkAllSubmit" disabled="disabled">Thực hiện</button>
         </div>
@@ -94,9 +94,9 @@
     document.addEventListener('DOMContentLoaded', function () {
         var courseId;
         var deleteForm = document.forms['delete-course-form'];
-        //var containerForm = document.forms['container-form'];
         var containerForm = $('form[name="container-form"]');
         var btnDeleteCoure = document.getElementById('btnDelete');
+        
         var checkAll = $('#checkboxAll');
         var checkItem = $('input[name="courseIds[]"]');
         var checkAllSubmitBtn = $('.checkAllSubmit');
